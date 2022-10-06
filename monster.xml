@@ -1,0 +1,58 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header>
+    <mh:MonsterHeader xmlns:mh="http://schemas.monster.com/MonsterHeader">
+      <mh:MessageData>
+        <mh:MessageId>Testing Job for RTP</mh:MessageId>
+        <mh:Timestamp>2022-10-05T15:53:15Z</mh:Timestamp>
+      </mh:MessageData>
+    </mh:MonsterHeader>
+    <wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/04/secext">
+      <wsse:UsernameToken>
+        <wsse:Username>xrtpjobsx01</wsse:Username>
+        <wsse:Password>rtp987654</wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <Job jobRefCode="Job - minimal fields" jobAction="addOrUpdate" xmlns="http://schemas.monster.com/Monster" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.monster.com/Monster http://schemas.monster.com/Current/xsd/Monster.xsd">
+      <RecruiterReference>
+        <UserName>xrtpjobsx01</UserName>
+      </RecruiterReference>
+      <JobInformation>
+        <JobTitle><![CDATA[Do Not Apply - Test Job - used only for testing of RTP Integration]]></JobTitle>
+        <Contact hideAll="true">
+          <Name>Hiring Manager Name</Name>
+          <E-mail>hiringmanager@Company.com</E-mail>
+        </Contact>
+        <PhysicalAddress>
+          <StreetAddress>133 Boston Post Road</StreetAddress>
+          <City>Weston</City>
+          <State>MA</State>
+          <CountryCode>US</CountryCode>
+          <PostalCode>02493</PostalCode>
+        </PhysicalAddress>
+        <JobBody><![CDATA[Do Not Apply - This posting is for testing purposes only! This is the job body, the full description of the position. This is the job body, the full description of the position.]]></JobBody>
+      </JobInformation>
+      <JobPostings>
+        <JobPosting>
+          <Location>
+            <City>Boston</City>
+            <State>MA</State>
+            <CountryCode>US</CountryCode>
+            <PostalCode>02101</PostalCode>
+          </Location>
+          <JobCategory monsterId="47" />
+          <JobOccupations>
+            <JobOccupation monsterId="11909" />
+          </JobOccupations>
+          <BoardName monsterId="178" />
+          <Industries>
+            <Industry>
+              <IndustryName monsterId="1" />
+            </Industry>
+          </Industries>
+        </JobPosting>
+      </JobPostings>
+    </Job>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
